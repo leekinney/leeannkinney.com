@@ -56,20 +56,35 @@ table {
 @font-face {font-family: 'Texta-Thin';src: url('webfonts/2C6B3F_F_0.eot');src: url('webfonts/2C6B3F_F_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C6B3F_F_0.woff2') format('woff2'),url('webfonts/2C6B3F_F_0.woff') format('woff'),url('webfonts/2C6B3F_F_0.ttf') format('truetype');}
 
 
-$blue: #00b9d0;
-$gray: #585956;
+$blue: #004b55;
+$gray: #292927;
 $yellow: #f9bd42;
 $yellow2: #febd42;
-$teal: #00aa9d;
+$teal: #004b45;
+$pink: #f95a61;
 $width: 1200px;
 $header: 1.75em;
 $pad: 20px;
+$white: #fff;
 
-body {background: $blue; font-size: 100%; font-family: 'Texta-Light', sans-serif; color: #fff; line-height: 175%;}
+body {font-size: 100%; font-family: 'Texta-Light', sans-serif; color: $gray; line-height: 175%;}
 
 .wrap {max-width: $width; margin: 0 auto;}
 
 .header-wrap {background: $gray;}
+
+.socialHover {
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-indent: -99999px;
+			&:hover {background-position: 0 0; }
+		}
+
+.github {background: url('../img/github.png') bottom;}
+.twitter {background: url('../img/twitter.png') bottom;}
+.linkedin {background: url('../img/linkedin.png') bottom;}
+.insta {background: url('../img/instagram.png') bottom;}
 
 header { max-width: $width; margin: 0 auto;
 	img {
@@ -80,21 +95,30 @@ header { max-width: $width; margin: 0 auto;
 				img {width: 30px;}
 			}
 		}
-		.mail a {float: right; margin-top: -40px;}
+		.mail a {float: right; margin-top: -40px; color: $pink;
+			&:hover {color: $yellow2;}
+		}
 	}
 
 	@media only screen and (min-width: 700px) {
 		header img {max-width: 680px;}
 	}
 
-a {font-family: 'Texta-Medium', sans-serif; color: $yellow2;}
+a {font-family: 'Texta-Medium', sans-serif; color: $teal;
+	&:hover {
+		color: $yellow2;
+		}
+	&:focus {
+		outline: $pink auto 5px;
+	}
+	}
 
 img {border: none; height: auto; max-width: 100%;}
 
 h2 {font-size: 1.5em;}
 
 .intro {font-size: $header; padding: $pad; background: $gray;
-		h1 {max-width: 760px; margin: 0 auto;
+		h1 {max-width: 760px; margin: 0 auto; color: $white;
 			.yellow {color: $yellow2; font-family: 'Texta-LightIt', sans-serif;
 		}
 	}
@@ -189,7 +213,7 @@ h2 {font-size: 1.5em;}
 	}
 
 /* footer */
-footer {background: $gray; padding: 10px; clear: both;}
+footer {background: $gray; padding: 10px; clear: both; }
 .inner-foot {max-width: $width; margin: 0 auto; height: 50px;
 	.social {
 		width: 50%; float: left; padding-left: $pad;
@@ -197,6 +221,6 @@ footer {background: $gray; padding: 10px; clear: both;}
 		display: inline-block; padding: 5px;
 		}
 	}
-.copy {font-family: 'Texta-LightIt', sans-serif; font-size: .75em;  float: right; padding: $pad;}
+.copy {font-family: 'Texta-LightIt', sans-serif; color: $yellow2; font-size: .75em;  float: right; padding: $pad;}
 }
 .space {clear: both;}
