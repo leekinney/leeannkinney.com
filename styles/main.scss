@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -73,36 +73,123 @@ body {background: $blue; font-size: 100%; font-family: 'Texta-Light', sans-serif
 
 header { max-width: $width; margin: 0 auto;
 	img {
-		margin-bottom: -10px;
+		margin-bottom: -10px; max-width: 380px;
 		}
+		.social {float: right; margin-top: 20px;
+			li {display: inline-block;
+				img {width: 30px;}
+			}
+		}
+		.mail a {float: right; margin-top: -40px;}
+	}
+
+	@media only screen and (min-width: 700px) {
+		header img {max-width: 680px;}
 	}
 
 a {font-family: 'Texta-Medium', sans-serif; color: $yellow2;}
 
 img {border: none; height: auto; max-width: 100%;}
 
-.intro {font-size: $header; padding: $pad;
+h2 {font-size: 1.5em;}
+
+.intro {font-size: $header; padding: $pad; background: $gray;
 		h1 {max-width: 760px; margin: 0 auto;
 			.yellow {color: $yellow2; font-family: 'Texta-LightIt', sans-serif;
 		}
-	}	
+	}
 }
 
-.banner-container {background-size: cover; background-position: 100% 50%; min-height: 500px; position: relative; background-image: url(../img/github-oval.jpg);}
+.banner-container {background-size: cover; background-position: 100% 50%; min-height: 150px; position: relative; background-image: url(../img/github-oval.jpg);}
+
+	@media only screen and (min-width: 680px) {
+		.banner-container {min-height: 300px;}
+	}
+
+	@media only screen and (min-width: 1090px) {
+		.banner-container {min-height: 400px;}
+	}
 
 .about {font-size: 1.5em; padding: 40px;}
 
 .love li {display: inline-block; margin: 10px; width: 30%; max-width: 300px; }
 
-.love img {width: 80%;
-	height: 80%;
+.love img {width: 70%;
+	height: 70%;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	}
 
+/* things I love */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+  float: left;
+  margin: 2.5%;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+  width: 100%;
+	max-width: 170px;
+	height: 170px;
+  border-radius: 50%;
+}
+
+.flip-container img, .front img, .back img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	opacity: 0.7;
+	background: rgba(0, 0, 0, 0.8);
+		h3 {
+		z-index: 5;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		position: relative;
+		font-size: 17px;
+		padding: 10px;
+		margin-top: 65px;
+		}
+	}
+
 /* footer */
-footer {background: $gray; padding: 10px;} 
+footer {background: $gray; padding: 10px; clear: both;}
 .inner-foot {max-width: $width; margin: 0 auto; height: 50px;
 	.social {
 		width: 50%; float: left; padding-left: $pad;
@@ -110,6 +197,6 @@ footer {background: $gray; padding: 10px;}
 		display: inline-block; padding: 5px;
 		}
 	}
-.copy {font-family: 'Texta-LightIt', sans-serif; font-size: .75em;  float: right; padding: $pad;} 
+.copy {font-family: 'Texta-LightIt', sans-serif; font-size: .75em;  float: right; padding: $pad;}
 }
 .space {clear: both;}
