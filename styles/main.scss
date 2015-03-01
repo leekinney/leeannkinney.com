@@ -64,10 +64,13 @@ $teal: #004b45;
 $pink: #f95a61;
 $width: 1200px;
 $header: 1.75em;
+$body: 1.25em;
 $pad: 20px;
 $white: #fff;
 
 body {font-size: 100%; font-family: 'Texta-Light', sans-serif; color: $gray; line-height: 175%;}
+
+p, li {font-size: $body;}
 
 a {font-family: 'Texta-Medium', sans-serif; color: $teal;
 	&:hover {

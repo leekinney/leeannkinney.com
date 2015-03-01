@@ -71,6 +71,9 @@ body {
   color: #292927;
   line-height: 175%; }
 
+p, li {
+  font-size: 1.25em; }
+
 a {
   font-family: 'Texta-Medium', sans-serif;
   color: #004b45; }
