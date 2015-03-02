@@ -178,12 +178,13 @@ header {
     margin: 0 auto;
     padding: 0 $pad;
     img {
-        margin-bottom: -10px;
-        max-width: 320px;
+        margin-bottom: -20px;
+        max-width: 300px;
     }
-    .social {
-        float: right;
-        margin-top: 20px;
+    .social-head {
+        position: absolute;
+        top: 5px;
+        right: 5%;
         li {
             display: inline-block;
             img {
@@ -462,13 +463,20 @@ h2 {
 
 .flip-container, .front, .back {
     width: 100%;
-    max-width: 170px;
-    height: 170px;
+    max-width: 300px;
+    height: 300px;
     border-radius: 50%;
     img {
         width: 100%;
         border-radius: 50%;
     }
+}
+
+@media only screen and (min-width: 400px) {
+	.flip-container, .front, .back {
+		max-width: 170px;
+		height: 170px;
+	}
 }
 
 /* flip speed goes here */
@@ -528,7 +536,6 @@ footer {
     margin: 0 auto;
     height: 50px;
     .social {
-        width: 50%;
         float: left;
         padding-left: $pad;
         li {
@@ -543,6 +550,10 @@ footer {
         float: right;
         padding: $pad;
     }
+}
+
+@media only screen and (min-width: 600px) {
+	.social {width: 100%;}
 }
 
 .space {
