@@ -105,6 +105,8 @@ p, li {
     font-size: $body;
 }
 
+li {padding-bottom: 10px;}
+
 ul {margin-left: $margin;}
 
 a {
@@ -138,6 +140,7 @@ img {
 
 .header-wrap {
     background: $gray;
+    padding: 10px 0;
 }
 
 .socialHover {
@@ -176,7 +179,7 @@ header {
     padding: 0 $pad;
     img {
         margin-bottom: -10px;
-        max-width: 380px;
+        max-width: 320px;
     }
     .social {
         float: right;
@@ -214,6 +217,7 @@ h2 {
     background: $gray;
     h1 {
         margin: 0 $margin;
+        padding: 10px;
         color: $white;
         .yellow {
             color: $yellow2;
@@ -492,19 +496,22 @@ h2 {
 /* back, initially hidden pane */
 .back {
     transform: rotateY(180deg);
-    opacity: 0.7;
-    background: rgba(0, 0, 0, 0.8);
+    background: $yellow2;
     h3 {
         z-index: 5;
         text-transform: uppercase;
         color: #fff;
         text-align: center;
         position: relative;
-        font-size: 17px;
+        font-size: 1.5em;
         padding: 10px;
         margin-top: 65px;
+
     }
 }
+
+h3.sports {margin-top: 45px;}
+
 
 
 /*

@@ -70,6 +70,9 @@ body {
 p, li {
   font-size: 1.25em; }
 
+li {
+  padding-bottom: 10px; }
+
 ul {
   margin-left: 20px; }
 
@@ -97,7 +100,8 @@ img {
   padding: 10px; }
 
 .header-wrap {
-  background: #292927; }
+  background: #292927;
+  padding: 10px 0; }
 
 .socialHover {
   display: block;
@@ -128,7 +132,7 @@ header {
   padding: 0 20px; }
   header img {
     margin-bottom: -10px;
-    max-width: 380px; }
+    max-width: 320px; }
   header .social {
     float: right;
     margin-top: 20px; }
@@ -157,6 +161,7 @@ h2 {
   background: #292927; }
   .intro h1 {
     margin: 0 20px;
+    padding: 10px;
     color: #fff; }
     .intro h1 .yellow {
       color: #febd42;
@@ -388,17 +393,19 @@ h2 {
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  opacity: 0.7;
-  background: rgba(0, 0, 0, 0.8); }
+  background: #febd42; }
   .back h3 {
     z-index: 5;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 17px;
+    font-size: 1.5em;
     padding: 10px;
     margin-top: 65px; }
+
+h3.sports {
+  margin-top: 45px; }
 
 /*
 	footer
