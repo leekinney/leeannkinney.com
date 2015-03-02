@@ -463,8 +463,8 @@ h2 {
 
 .flip-container, .front, .back {
     width: 100%;
-    max-width: 300px;
-    height: 300px;
+    max-width: 270px;
+    height: 270px;
     border-radius: 50%;
     img {
         width: 100%;
@@ -537,7 +537,6 @@ footer {
     height: 50px;
     .social {
         float: left;
-        padding-left: $pad;
         li {
             display: inline-block;
             padding: 5px;
@@ -553,7 +552,7 @@ footer {
 }
 
 @media only screen and (min-width: 600px) {
-	.social {width: 50%;}
+	.social {width: 50%; padding-left: $pad;}
 }
 
 .space {
