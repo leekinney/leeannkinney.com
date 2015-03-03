@@ -181,8 +181,12 @@ header {
         margin-bottom: -20px;
         max-width: 300px;
     }
-    .social-head {
+}
+.social-head {display: none;}
+@media only screen and (min-width: 400px) {
+.social-head {
         position: absolute;
+        display: block;
         top: 5px;
         right: 5%;
         li {
@@ -190,14 +194,6 @@ header {
             img {
                 width: 30px;
             }
-        }
-    }
-    .mail a {
-        float: right;
-        margin-top: -40px;
-        color: $pink;
-        &:hover {
-            color: $yellow2;
         }
     }
 }
@@ -217,7 +213,7 @@ h2 {
     
     background: $gray;
     h1 {
-        margin: 0 $margin;
+        margin-left: $margin;
         padding: 10px;
         color: $white;
         .yellow {

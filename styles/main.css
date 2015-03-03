@@ -133,21 +133,20 @@ header {
   header img {
     margin-bottom: -20px;
     max-width: 300px; }
-  header .social-head {
+
+.social-head {
+  display: none; }
+
+@media only screen and (min-width: 400px) {
+  .social-head {
     position: absolute;
+    display: block;
     top: 5px;
     right: 5%; }
-    header .social-head li {
+    .social-head li {
       display: inline-block; }
-      header .social-head li img {
-        width: 30px; }
-  header .mail a {
-    float: right;
-    margin-top: -40px;
-    color: #f95a61; }
-    header .mail a:hover {
-      color: #febd42; }
-
+      .social-head li img {
+        width: 30px; } }
 @media only screen and (min-width: 700px) {
   header img {
     max-width: 680px; } }
@@ -161,7 +160,7 @@ h2 {
   font-size: 1.75em;
   background: #292927; }
   .intro h1 {
-    margin: 0 20px;
+    margin-left: 20px;
     padding: 10px;
     color: #fff; }
     .intro h1 .yellow {
